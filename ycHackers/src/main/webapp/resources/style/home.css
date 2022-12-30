@@ -1,0 +1,55 @@
+body{
+    width:100%;
+    padding:0;
+    margin:0;
+    height:100%;
+}
+#homeContainer{
+    display:grid;
+    min-height: 100vw;
+    background-color: yellow;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(2,1fr);
+    border-radius: 10px;
+    row-gap: 1%;
+    column-gap: 1%;
+    margin-bottom: 0;
+}
+.homeBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1%;
+    width:50%;
+    height:50%;
+    min-width: 145px;
+    min-height: 145px;
+}
+#infoBox{
+    background-color: #fff;
+    box-shadow: 3px 3px 3px #000;
+    place-self: end;
+    background: antiquewhite;
+}
+#loginBox{
+    background-color: #fff;
+    box-shadow: -3px 3px 3px #000;
+    align-self: end;
+    background: beige;
+}
+#joinBox{
+    background-color: #fff;
+    box-shadow: 3px -3px 3px #000;
+    justify-self: flex-end;
+    background: cornsilk;
+}
+#textBox{
+    justify-items: center;
+    box-shadow: -3px -3px 3px #000;
+    background: yellow;
+}
+.homeText{
+    font-size: 2em;
+    text-decoration: none;
+    color: #000;
+}
