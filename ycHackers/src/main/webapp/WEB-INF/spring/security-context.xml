@@ -8,20 +8,60 @@
 		http://www.springframework.org/schema/security 
 		http://www.springframework.org/schema/security/spring-security.xsd"
 >
+	<!-- Authority -->
+	<http auto-config="true" use-expressions="true">
+		<access-denied-handler error-page="/main"/>
 
-<http auto-config="true" use-expressions="true">
+		<headers>
+			<frame-options disabled="true"/>
+		</headers>
+		
+		<!-- 처음 접근 페이지("/"요청 = home), permitAll: 모두 접근 -->
+		<intercept-url pattern="/" access="permitAll"/>
+		<intercept-url pattern="/processLogin" access="permitAll"/>
+		<intercept-url pattern="/images/**" access="permitAll"/>
+		<!-- isAnonymous(): 로그인 안한 상태(비회원)만 접근 -->
+		<intercept-url pattern="/login" access="isAnonymous()"/>
+		<intercept-url pattern="/loginView" access="isAnonymous()"/>
+		<intercept-url pattern="/join" access="isAnonymous()"/>		
+		<intercept-url pattern="/joinView" access="isAnonymous()"/>
+		<!-- hasRole(): ()안의 권한을 획득한 사람만 접근 -->
+		<intercept-url pattern="/**" access="hasAnyRole('ROLE_USER','ROLE_MANAGER','ROLE_ADMIN')" requires-channel="https"/>
+		
+		<form-login 
+			login-processing-url="/login"
+			login-page="/loginView"
+			username-parameter="pid"
+			password-parameter="ppw"
+			default-target-url="/main"
+			authentication-failure-url="/processLogin?error=1"
+			always-use-default-target="true"
+		/>
+		<logout
+			invalidate-session="true"
+			logout-url="/logout"
+			logout-success-url="/processLogin?logout=1"
+			delete-cookies="JSESSIONID,remember-me"
+		/>		
+		<remember-me
+			remember-me-parameter="remember-me"
+			remember-me-cookie="remember-me"
+			key="dreamikkey"
+			token-validity-seconds="3600"
+		/>
+		<csrf disabled="false"/>
 
-</http>
-<!-- 인증처리(authentication) -->
+
+	</http>
+	
+	<!-- 인증처리(authentication) -->
 	<authentication-manager>
 		<authentication-provider user-service-ref="customUserDetailService">
 			<password-encoder ref="passwordEncoder" />
 		</authentication-provider>
 	</authentication-manager>
 	<!-- 인증처리 클래스로 UserDetailService인터페이스를 구현한 클래스로 개발자가 만듦 -->
-	<!-- 
-	<beans:bean id="customUserDetailService" class="com.project.YCHackers.security.CustomUserDetailService" />
-	 -->
+	<beans:bean id="customUserDetailService" class="com.ych.pjt.security.CustomUserDetailsService" />
 	<!-- 암호화 된 패스워드 처리 빈 	-->
 	<beans:bean id="passwordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
 </beans:beans>
