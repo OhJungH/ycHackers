@@ -35,7 +35,7 @@
 		<beans:property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<beans:property name="url" value="jdbc:mysql://localhost:3306/YCHackers" />
 		<beans:property name="username" value="root" />
-		<beans:property name="password" value="yc1234" />
+		<beans:property name="password" value="8941256asd!!" />
 	</beans:bean>
 	
 	<!-- dataSource bean을 멤버필드로 사용하는 JdbeTemplate bean 정의 -->
