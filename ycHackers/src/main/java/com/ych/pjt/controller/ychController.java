@@ -14,8 +14,6 @@ import com.ych.pjt.command.UserJoinCommand;
 import com.ych.pjt.dao.UserDao;
 import com.ych.pjt.util.Constant;
 
-
-
 @Controller
 public class ychController {
 private UserJoinCommand com;
