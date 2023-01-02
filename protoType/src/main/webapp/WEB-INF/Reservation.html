@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>home</title>
+<!--bootstrap-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container" style="text-align:center">
+	<h1 style="color:#00CCFF;">YCHackers</h1>
+</div>
+<div>
+	<nav class="navbar navbar-expand-md bg-dark navbar-green container font-weight-bold sticky-top">
+		<a class="navbar-brand" href="#">
+			<img src="../resources/image/beach.png" alt="Logo" style="width:40px;">
+		</a>
+		<div class="collapse navbar-collapse" id="collapsibleNavbar">		
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="home"> 
+				 		<i class="fas fa-home" style="font-size:30px;color:white;"></i>
+				 	</a>
+				</li>			
+				 <li class="nav-item">
+				 	<a class="nav-link" href="#">안내</a>
+				 </li>
+				 <li class="nav-item">
+				 	<a class="nav-link" href="#">검색</a> 
+				 </li>
+				 <li class="nav-item">
+				 	<a class="nav-link" href="#">관리자(로그인해야댐)</a>
+				 </li>			
+				 <li class="nav-item">
+				 	<a class="nav-link" href="#">로그아웃(로그인 한 상태에서 보여짐)</a>
+				 </li>					
+			</ul>
+		</div>	
+	</nav>
+</div>
+
+<form action="#">
+	<div class="form-group text-center text-info threeDEffect">
+		<label for="ResNum">회원번호</label>
+		<input type="text" id="ResNum" name="ResNum" style="width:500px;">
+	</div>
+	<div class="form-group text-center text-info threeDEffect">
+		<label for="ResName">이름</label>
+		<input type="text" id="ResName" name="ResName" style="width:500px;">
+	</div>
+	<div class="form-group text-center text-info threeDEffect">
+		<label for="ResBirth">생년월일</label>
+		<input type="text" id="ResBirth" name="ResBirth" style="width:500px;">
+	</div>
+	<div class="form-group text-center text-info threeDEffect">
+		<label for="ResPhone">연락처</label>
+		<input type="text" id="ResPhone" name="ResPhone" style="width:500px;">
+	</div>
+	<div class="form-group text-center text-info threeDEffect">
+		<label for="ResDate">예약날짜</label>
+		<input type="text" id="ResDate" name="ResDate" style="width:500px;">
+	</div>
+	<div class="form-group text-center text-info threeDEffect">
+		<label for="ResTime">예약시간</label>
+		<input type="text" id="ResTime" name="ResTime" style="width:500px;">
+	</div>
+	<div class="form-group text-center text-info threeDEffect">
+		<label for="ResMember">인원</label>
+		<input type="text" id="ResMember" name="ResMember" style="width:500px;">
+	</div>
+	<div class="form-group text-center text-info threeDEffect">
+		<label for="Payments">결제</label>
+		<input type="text" id="Payments" name="Payments" style="width:500px;">
+	</div>
+	<div class="form-group text-center text-info threeDEffect">
+		<label for="ResComments">요청사항</label>
+		<input type="text" id="ResComments" name="ResComments" style="width:500px;">
+	</div>
+	<div class="container" style="text-align:center;">
+		<button type="submit">예약하기</button>
+		<button type="submit">취소하기</button>
+	</div>
+</form>
+
+<div id="footer">
+        <div class="footerBox">
+            <p id="footerPageName" class="footerLabel">YCHackers</p>
+            <p id="footerCompany">
+                <span class="footerLabel">회사명</span> (사)양천구해커스
+            </p>
+            <p id="footerCompanyNum">
+                <span class="footerLabel">사업자번호</span> 000-00-00000
+            </p>
+            <p id="footerAddress">서울특별시 양천구 신정동 1319-4 양천중앙도서관 </p>
+            <a class="footerLink" id="companyIntro" href="companyIntro">회사소개</a>&emsp; 
+            <a class="footerLink" id="termsOfService" href="termsOfService">서비스이용약관</a> &emsp;
+            <a class="footerLink" id="privacyPolicy" href="privacyPolicy">개인정보처리방침</a>
+        </div>
+        <div class="footerBox">
+            <p>
+                <span class="footerLabel">등록문의</span> 000-0000-0000
+            </p>
+            <p>
+                <span class="footerLabel">기타문의</span> 000-0000-0000
+            </p>
+            <br/><br/>
+            <p>
+                <span id="footerCopy">COPYRIGHT &copy; 2022(주)양천구해커스 ALL RIGHTS RESERVED</span>
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
