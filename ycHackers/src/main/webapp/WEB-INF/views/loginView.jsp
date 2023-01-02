@@ -28,30 +28,42 @@
 	integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 <!--google icon -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<!--custom Style-->
-    <link rel="stylesheet" href="css/home.css"/>
+<!--custom style-->
+    <link rel="stylesheet" href="css/loginView.css"/>
     <link rel="stylesheet" href="css/footer.css"/>
 </head>
 <body>
-<div id="homeContainer">
-        <div id="infoBox" class="homeBox">
-            <!--a element bootstrap stratch--> 
-            <a id="infoBoard" class="homeText " href="infoBoard">안내</a>
-        </div>
-        <div id="loginBox" class="homeBox"> 
-            <a id="loginView" class="homeText" href="loginView">로그인</a>
-        </div>
-        <div id="joinBox"class="homeBox"> 
-            <a id="joinView" class="homeText" href="joinView">회원가입</a>
-        </div>
-        <div id="textBox" class="homeBox"> 
-            <span class="homeText">
-                YCHackers
-                <h3 id="clock">00:00</h3>
-            </span>
-        </div>
+<div id="loginContainer">
+        <h1 class="display-1">Log In</h1><br/><br/>
+        <form action="login" method="post" id="loginFrm">
+            <div class="input-group">
+                <input class="loginControl form-control" type="email"  placeholder="abcd@efg.hij" required/>
+            </div>
+            <div class="input-group">
+                <input class="loginControl form-control" type="password"/>
+                <div class="input-group-append">
+                    <button class="btn btn-outline-success" type="submit">로그인</button>
+                </div>
+            </div>
+            <a href="joinView" class="loginHelp" id="joinView">아직 회원이 아니신가요?</a>
+            <a href="findInfo" class="loginHelp" id="findInfo">아이디/비밀번호가 기억이 안나나요?</a> &emsp;
+            <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="rememberMe" checked/>
+                <label class="custom-control-label" for="rememberMe">
+                    remember me?
+                </label>
+            </div>
+        </form>
+        <a href="#">
+            <img class="socialLoginIcon rounded-circle" alt="kakaoBtn" src="https://cs.kakao.com/img/cskakaocom/pc/thumb/thumb_kakaotalk.png"/>
+        </a>
+        <a href="#">
+            <img class="socialLoginIcon rounded-circle" alt="naverBtn" src="https://play-lh.googleusercontent.com/Kbu0747Cx3rpzHcSbtM1zDriGFG74zVbtkPmVnOKpmLCS59l7IuKD5M3MKbaq_nEaZM=w240-h480-rw"/>
+        </a>
+        <a href="#">
+            <img class="socialLoginIcon rounded-circle" alt="googleBtn" src="https://play-lh.googleusercontent.com/aFWiT2lTa9CYBpyPjfgfNHd0r5puwKRGj2rHpdPTNrz2N9LXgN_MbLjePd1OTc0E8Rl1=w240-h480-rw"/>
+        </a>
     </div>
-    <script src="JS/clock.js"></script>
     <div id="footer">
         <div class="footerBox">
             <p id="footerPageName" class="footerLabel">YCHackers</p>
