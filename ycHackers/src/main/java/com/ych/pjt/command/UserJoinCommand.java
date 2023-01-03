@@ -28,8 +28,6 @@ public class UserJoinCommand implements ychCommand {
 		System.out.println(id+"/"+num+"/"+pw+address+"/"+myself);
 		
 		
-		
-		
 	}
 
 }
